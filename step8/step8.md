@@ -4,4 +4,6 @@ cd output
 
 make install
 
-cpack
+ctest
+
+ctest -C Debug -D Experimental
