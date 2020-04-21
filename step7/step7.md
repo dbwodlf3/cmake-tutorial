@@ -4,4 +4,4 @@ cd output
 
 make install
 
-Tutorial 9
+cpack

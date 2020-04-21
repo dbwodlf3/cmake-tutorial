@@ -1,0 +1,5 @@
+This is the open source License.txt file.
+i copied many codes from CMake/Tutorial/Step7... (here)[https://github.com/Kitware/CMake/blob/master/Help/guide/tutorial/Step8/License.txt]
+anyway.
+
+good luck.
