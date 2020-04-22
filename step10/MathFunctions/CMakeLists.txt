@@ -15,6 +15,7 @@ if(USE_MYMATH)
 
   # first we add the executable that generates the table
   add_executable(MakeTable MakeTable.cxx)
+  target_link_libraries(MakeTable PRIVATE tutorial_compiler_flags)
 
   # add the command to generate the source code
   add_custom_command(
@@ -38,9 +39,12 @@ if(USE_MYMATH)
   set_target_properties(SqrtLibrary PROPERTIES
                         POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS}
                         )
-
+  
+  target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
   target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
 endif()
+
+target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
 
 # define the symbol stating we are using the declspec(dllexport)
 # building on windwos
