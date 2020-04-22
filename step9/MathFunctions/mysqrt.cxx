@@ -5,6 +5,8 @@
 // include the generated table
 #include "Table.h"
 
+namespace mathfunctions {
+namespace detail {
   // a hack square root calculation using simple operations
 double mysqrt(double x){
   if (x <= 0){
@@ -29,4 +31,6 @@ double mysqrt(double x){
   }
 
   return result;
+}
+}
 }
