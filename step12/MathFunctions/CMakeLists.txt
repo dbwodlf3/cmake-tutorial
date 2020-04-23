@@ -52,6 +52,10 @@ target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
 # building on windwos
 target_compile_definitions(MathFunctions PRIVATE "EXPORTING_MYMATH")
 
+# set version numbering 여기서 에러일어남. libMathFunctionsd.so 링킹을 해야하는데. 뒤에 1.0.0이 붙어서 그럼.
+# set_property(TARGET MathFunctions PROPERTY VERSION "1.0.0")
+# set_property(TARGET MathFunctions PROPERTY SOVERSION "1")
+
 # install rules
 install(TARGETS MathFunctions tutorial_compiler_flags
         DESTINATION lib
